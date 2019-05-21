@@ -41,6 +41,6 @@ app.get('/profile/:id', (req ,res) => { profile.handleProfile(req, res, DB)})
 app.put('/image', (req, res) => { image.handleImg(req, res, DB)})
 app.post('/imageurl', (req, res) => {image.handleApiCall(req, res)})
 
-app.listen( PORT, () => {
+app.listen( PORT || 3001, () => {
     console.log(`Correindo en puerto ${PORT}`);
 });
